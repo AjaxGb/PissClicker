@@ -1,0 +1,60 @@
+
+.action-container {
+	max-width: 200px;
+}
+.action-container > .action {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	max-width: 100px;
+	margin: 0 auto;
+}
+.bladder {
+	position: relative;
+	z-index: -2;
+	margin: 50px auto;
+	height: 100px;
+	padding: 10px;
+	border-radius: 10px;
+}
+.bladder, .bladder::before, .bladder::after {
+	background: #faa;
+	border: solid 1px #f66;
+}
+.bladder::before, .bladder::after {
+	content: "";
+	display: block;
+	position: absolute;
+	border-top: none;
+	border-bottom: none;
+	width: 20px;
+	height: 51px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.bladder::before {
+	bottom: -51px;
+}
+.bladder::after {
+	top: -51px;
+}
+.liquid-wrapper {
+	position: absolute;
+	z-index: -1;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	top: 5px;
+}
+.liquid {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: height 0.2s;
+	background: #ff08;
+	border-top: solid 1px #ff0;
+	border-radius: 0 0 6px 6px;
+	max-height: 100%;
+}
